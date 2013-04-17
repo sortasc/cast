@@ -1,0 +1,17 @@
+/*
+ * ADMIN LAYOUT
+ * THEME SPINA
+ *= require_self
+ *= require spina/reset
+ *= require spina/icons
+ *= require spina/formalize
+ *= require spina/checkboxes
+ *= require spina/sourcerer
+ *= require spina/jqueryui
+ *= require spina/tipsy
+ *= require spina/calendar
+ *= require spina/tags
+ *= require spina/selectboxes
+ *= require spina/960
+ *= require spina/main
+ */

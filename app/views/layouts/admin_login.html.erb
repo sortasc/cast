@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cast Zone</title>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+  
+  <body id="login">
+  
+    <div id="login_container">
+      <div id="login_form">
+        <form method="post" action="/login">
+          <p>
+            <input type="text" id="username" name="username" placeholder="Username" class="{validate: {required: true}}" />
+          </p>
+          <p>
+            <input type="password" id="password" name="password" placeholder="Password" class="{validate: {required: true}}" />
+          </p>
+          <button type="submit" class="button blue">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

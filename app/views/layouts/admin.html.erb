@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cast</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Cast Zone</title>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%= javascript_include_tag "admin" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+    <nav id="primary">
+      <ul>
+        <li class="active">
+          <a href="#">
+            <span class="icon32 dashboard"></span>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon32 shuffle"></span>
+            UI Elements
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon32 pencil"></span>
+            Forms
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon32 listicon"></span>
+            Tables
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon32 chart"></span>
+            Charts
+          </a>
+        </li>
+        <li class="bottom">
+          <a href="#">
+            <span class="icon32 quit"></span>
+            Log out
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <nav id="secondary">
+      
+      <div id="notifications">
+        <ul>
+        </ul>
+      </div>
+    </nav>
+    
+    <section id="maincontainer">
+      <div id="main" class="container_12">
+      
+        <%= yield %>
+      
+      </div>
+    </section>
 
 </body>
 </html>
