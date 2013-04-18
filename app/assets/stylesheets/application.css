@@ -11,4 +11,6 @@
  *= require_self
  *= require flat/bootstrap
  *= require flat/flat-ui 
+ *= require common
+ *= require resources/_static
  */

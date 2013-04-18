@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cast</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="login-screen">
+    <div class="login-icon">
+      <h4>Cast <small>Login</small></h4>
+    </div>
+    <div class="login-form">
+      <div class="control-group">
+        <input type="text" id="login-name" placeholder="Enter your name" value="" class="login-field">
+        <label for="login-name" class="login-field-icon fui-man-16"></label>
+      </div>
+
+      <div class="control-group">
+        <input type="password" id="login-pass" placeholder="Password" value="" class="login-field">
+        <label for="login-pass" class="login-field-icon fui-lock-16"></label>
+      </div>
+
+      <a href="#" class="btn btn-primary btn-large btn-block">Login</a>
+      <a href="#" class="login-link">Lost your password?</a>
+    </div>
+  </div>
+
+</body>
+</html>
