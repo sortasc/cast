@@ -32,6 +32,7 @@ end
 
 group :test, :development do
   gem 'minitest'
+  gem 'turn'
 end
 
 gem 'coveralls', require: false
