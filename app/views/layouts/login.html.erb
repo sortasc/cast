@@ -11,6 +11,8 @@
   <div class="login-screen">
     <div class="login-icon">
       <h4>Cast <small>Login</small></h4>
+      <%= link_to "Sign in", new_session_path(@user) %><br />
+      <%= link_to "Sign up", new_registration_path(@user) %><br />
     </div>
     <div class="login-form">
       <div class="control-group">

@@ -31,7 +31,7 @@ group :development do
 end
 
 group :test, :development do
-  gem 'minitest-rails'
+  gem 'minitest'
 end
 
 gem 'coveralls', require: false
