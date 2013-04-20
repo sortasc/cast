@@ -32,10 +32,10 @@ $('document').ready(function() {
     PJAX
   *******/
   
-  $('nav#primary a').click(function() {
-    window.location = $(this).attr("href");
-    return false;
-  });
+  // $('nav#primary a').click(function() {
+  //   window.location = $(this).attr("href");
+  //   return false;
+  // });
   
   $('nav#secondary a').pjax({
     container: '#main',

@@ -41,10 +41,10 @@
           </a>
         </li>
         <li class="bottom">
-          <a href="#">
+          <%= link_to destroy_root_session_path, method: :delete do %>
             <span class="icon32 quit"></span>
             Log out
-          </a>
+          <% end %>
         </li>
       </ul>
     </nav>

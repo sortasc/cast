@@ -36,7 +36,7 @@ $.fn.pjax = function( container, options ) {
     return false
   }
 
-  return this.live('click', function(event){
+  return this.on('click', function(event){
     // Middle click, cmd click, and ctrl click should open
     // links in a new tab as normal.
     if ( event.which > 1 || event.metaKey )

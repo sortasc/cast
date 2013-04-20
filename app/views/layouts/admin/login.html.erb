@@ -11,15 +11,12 @@
   
     <div id="login_container">
       <div id="login_form">
-        <form method="post" action="/login">
-          <p>
-            <input type="text" id="username" name="username" placeholder="Username" class="{validate: {required: true}}" />
-          </p>
-          <p>
-            <input type="password" id="password" name="password" placeholder="Password" class="{validate: {required: true}}" />
-          </p>
+        <br>
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <p><%= f.email_field :email, autofocus: true, placeholder: "Email", class: "{validate: {required: true}}" %></p>
+          <p><%= f.password_field :password, placeholder: "Password", class: "{validate: {required: true}}" %></p>
           <button type="submit" class="button blue">Login</button>
-        </form>
+        <% end %>
       </div>
     </div>
   </body>

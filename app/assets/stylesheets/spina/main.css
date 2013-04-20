@@ -467,7 +467,7 @@ form p {
   position: relative;
 }
 
-form input[type="text"], form input[type="password"], form textarea {
+form input[type="email"], form input[type="text"], form input[type="password"], form textarea {
   background: url(input_bg.png) repeat-x #fdfdfd;
   border: 1px solid #d9d9d9;
   border-top: 1px solid #ccc;
@@ -1349,7 +1349,7 @@ h6 {
   margin: 0 auto;
   margin-top: 150px;
   position: relative;
-  width: 602px;
+  width: 274px;
 }
 
 #login_form {
@@ -1357,16 +1357,13 @@ h6 {
   border-radius: 2px;
   box-shadow: 0 1px 5px black;
   margin: 0 auto;
-  padding: 8px;
+  padding: 14px;
   position: absolute;
   top: 64px;
   zoom: 1;
 }
 
 #login_form p {
-  display: inline-block;
-  *display: inline;
-  margin-bottom: 0;
   margin-right: 4px;
   width: 240px;
   zoom: 1;
@@ -1375,6 +1372,7 @@ h6 {
 #login_form button {
   line-height: 30px;
   margin: 0;
+  float: right;
 }
 
 /* Icons */

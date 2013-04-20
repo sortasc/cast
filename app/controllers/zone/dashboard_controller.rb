@@ -1,7 +1,7 @@
 class Zone::DashboardController < ApplicationController
   before_filter :authenticate_root!
   
-  layout 'admin'
+  layout 'admin/application'
   
   def index
   end
