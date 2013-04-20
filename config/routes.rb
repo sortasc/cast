@@ -1,14 +1,13 @@
 Cast::Application.routes.draw do
 
-  devise_for :users
-  devise_for :roots
-
+	devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :roots, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  
   namespace :zone do
     get '/', to: 'dashboard#index'
     # resources :roots
   end
 
-	get 'boards/index'
-  root to: 'static#index'
+  root to: 'boards#index'
   
 end
