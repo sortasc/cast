@@ -1,7 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/krawdyah/workspaces/sorta/cast/test/controllers/static_controller_test.rb": [
+      "/home/caline/workspace/sorta/cast/test/controllers/static_controller_test.rb": [
         1,
         null,
         1,
@@ -12,7 +12,7 @@
         null,
         null
       ],
-      "/Users/krawdyah/workspaces/sorta/cast/test/models/root_test.rb": [
+      "/home/caline/workspace/sorta/cast/test/models/root_test.rb": [
         1,
         null,
         1,
@@ -21,7 +21,7 @@
         null,
         null
       ],
-      "/Users/krawdyah/workspaces/sorta/cast/test/models/user_test.rb": [
+      "/home/caline/workspace/sorta/cast/test/models/user_test.rb": [
         1,
         null,
         1,
@@ -31,6 +31,6 @@
         null
       ]
     },
-    "timestamp": 1366401926
+    "timestamp": 1366421375
   }
 }
