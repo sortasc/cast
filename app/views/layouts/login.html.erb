@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cast</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Cast Login</title>
+  <%= stylesheet_link_tag  "flat/bootstrap", "flat/flat-ui", "vendor/orbit", "resources/_login", :media => "all" %>
+  <%= javascript_include_tag "vendor/custom.modernizr", "vendor/jquery", "foundation/foundation", "foundation/foundation.orbit" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-namespace='login'>
 
   <div class="login-screen">
-    <div class="login-icon">
-      <h4>Cast <small>Login</small></h4>
-      <%= link_to "Sign in", new_session_path(@user) %><br />
-      <%= link_to "Sign up", new_registration_path(@user) %><br />
-    </div>
-    <div class="login-form">
-      <div class="control-group">
-        <input type="text" id="login-name" placeholder="Enter your name" value="" class="login-field">
-        <label for="login-name" class="login-field-icon fui-man-16"></label>
-      </div>
 
-      <div class="control-group">
-        <input type="password" id="login-pass" placeholder="Password" value="" class="login-field">
-        <label for="login-pass" class="login-field-icon fui-lock-16"></label>
-      </div>
+    <div class="orbit-container">
+      <ul data-orbit>
+        <li data-orbit-slide="login" class="active">
+          <%= form_for 'user', url: user_session_path do |f| %>
+          <div class="login-form">
+            <div class="control-group">
+              <%= f.text_field :login, autofocus: true, placeholder: "Email or Username", class: "login-field" %>
+              <label for="login-name" class="login-field-icon fui-man-16"></label>
+            </div>
 
-      <a href="#" class="btn btn-primary btn-large btn-block">Login</a>
-      <a href="#" class="login-link">Lost your password?</a>
+            <div class="control-group">
+              <%= f.password_field :password, placeholder: 'Password', class: 'login-field' %>
+              <label for="login-pass" class="login-field-icon fui-lock-16"></label>
+            </div>
+
+            <%= f.submit "Login", class: "btn btn-primary btn-large btn-block" %><br />
+            <a href="#" class="login-link">Lost your password?</a><br />
+            <%= link_to "Sign up", '#', 'data-orbit-link' => 'register', class: "login-link" %><br />
+          </div>
+          <% end %>
+        </li>
+
+        <li data-orbit-slide="register">
+          <%= form_for 'user', url: user_registration_path do |f| %>
+            <div class="login-form">
+              <div class="control-group">
+                <%= f.text_field :username, placeholder: "Username", class: "login-field" %>
+                <label for="login-name" class="login-field-icon fui-man-16"></label>
+              </div>
+              <div class="control-group">
+                <%= f.email_field :email, placeholder: "Email", class: "login-field" %>
+                <label for="login-name" class="login-field-icon fui-mail-16"></label>
+              </div>
+              <div class="control-group">
+                <%= f.password_field :password, placeholder: 'Password', class: 'login-field' %>
+                <label for="login-pass" class="login-field-icon fui-lock-16"></label>
+              </div>
+              <%= f.submit "Register", class: "btn btn-primary btn-large btn-block" %><br />
+              <a href="#" class="login-link">Lost your password?</a><br />
+              <%= link_to "Login", '#', 'data-orbit-link' => 'login', class: "login-link sign" %><br />
+            </div>
+          <% end %>
+        </li>
+      </ul>
     </div>
+
   </div>
 
+  <script>
+  document.write('<script src=/assets/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+
+  $(document).foundation('orbit', {
+      bullets: false,
+      stack_on_small: false,
+      next_class: false,
+      prev_class: false,
+      timer_container_class: false,
+      timer_progress_class: false,
+      slide_number_class: false,
+    });
+  </script>
 </body>
 </html>

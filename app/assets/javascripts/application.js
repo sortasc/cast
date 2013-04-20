@@ -7,7 +7,7 @@
 //= require library/backbone-min
 //= require library/mustache
 //= require_tree ./flat
-//= require plugins/packery.pkgd.min
+//= require vendor/packery.pkgd.min
 
 var $container = $('#packery');
 // initialize
