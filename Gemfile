@@ -30,7 +30,7 @@ group :development do
   gem 'meta_request'
 end
 
-group :test, :development do
+group :test do
   gem 'minitest'
   gem 'turn'
 end

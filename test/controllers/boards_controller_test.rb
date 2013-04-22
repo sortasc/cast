@@ -1,9 +1,14 @@
-require "test_helper"
+require "minitest_helper"
 
-class BoardsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
+describe BoardsController do
+	let(:user) { MiniTest::Mock.new }
+	before { stub(:authenticate_user!, true) }
+
+	describe '#index' do 
+  	# before { sign_in user }
+  	get :index
+		# get :index
+  	respond_with(:success)
   end
 
 end
