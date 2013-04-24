@@ -14,5 +14,5 @@
  *= require vendor/normalize
  *= require vendor/foundation
  *= require resources/common
- *= require resources/_static
+ *= require resources/_boards
  */
