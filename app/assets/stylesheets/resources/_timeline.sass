@@ -1,0 +1,84 @@
+.timeline
+	z-index: 30
+	header
+		min-height: 100px
+		.btn
+			font-size: 13px
+			border-radius: 0
+	.in
+		border-bottom: 1px solid #D9DCE3
+		box-shadow: 0 1px 0 #FFFFFF
+		-moz-box-shadow: 0 1px 0 #FFFFFF
+		-webkit-box-shadow: 0 1px 0 #FFFFFF 
+		p
+			padding: 8px
+			margin: 0
+			color: white
+		ul.comments
+			margin-left: 6%
+			list-style: none
+			li
+				font-size: 12px
+				padding: 0 10px
+				.posted_at
+					color: #999
+		.discussion
+			background: #1abc9c
+			margin-bottom: 8px
+			z-index: -9
+			.posted_at
+				color: #DDD
+			.arrow
+				width: 0
+				height: 0
+				display: block
+				border-width: 10px
+				border-color: transparent #1abc9c transparent transparent
+				border-style: solid
+				position: absolute
+				top: 14px 
+				left: -20px
+	.notification
+		padding: 6px
+		background-color: #95a5a6
+		font-size: 11px
+		color: #FFF
+		margin: 10px 0
+	span.user 
+		font-weight: bold
+		margin-right: 4px
+	span.posted_at
+		font-size: 11px
+		margin: 0 10px
+		color: #DDD
+	textarea
+		box-shadow: none
+		border-radius: 0
+		padding: 10px
+		height: 42px 
+		background-color: #FAFAFA
+		overflow: hidden
+		&:focus
+			height: 84px
+			background-color: #FFF
+	.new_comment
+		box-shadow: none
+		border-radius: 0
+		margin-left: 6%
+		width: 94%
+		background-color: #FAFAFA
+
+	.circle
+		display: block
+		width: 80px
+		height: 80px
+		margin: 0 1em
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		-webkit-border-radius: 99em
+		-moz-border-radius: 99em
+		border-radius: 99em
+		border: 1px solid #FFF
+		float: left
+		z-index: 9

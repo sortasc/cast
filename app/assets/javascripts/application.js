@@ -8,6 +8,7 @@
 //= require library/mustache
 //= require_tree ./flat
 //= require vendor/packery.pkgd
+//= require vendor/jquery.nanoscroller
 
 $( function() {
   var $container = $('#packery');
@@ -16,9 +17,13 @@ $( function() {
 	  gutter: 20,
   });
   // get item elements, jQuery-ify them
-  var $itemElems = $( $container.packery('getItemElements') );
+  // var $itemElems = $( $container.packery('getItemElements') );
   // make item elements draggable
-  $itemElems.draggable();
+  // $itemElems.draggable();
   // bind Draggable events to Packery
-  $container.packery( 'bindUIDraggableEvents', $itemElems );
+  // $container.packery( 'bindUIDraggableEvents', $itemElems );
+
+  // timeline scrollbar
+	$(".nano").nanoScroller();
 });
+

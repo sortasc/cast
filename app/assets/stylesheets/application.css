@@ -15,4 +15,6 @@
  *= require vendor/foundation
  *= require resources/common
  *= require resources/_boards
+ *= require resources/_timeline
+ *= require vendor/nanoscroller
  */
