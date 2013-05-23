@@ -1,13 +1,10 @@
 language: ruby
 rvm:
-  - ruby-1.9.3-p362
-env:
-  - DB=mongodb
-service:
+	- ruby-1.9.3-p362
+services: 
 	- mongodb
+
 script:
-  - RAILS_ENV=test bundle exec rake db:create
-  - RAILS_ENV=test bundle exec rake db:migrate
-  - bundle exec rake
-before_script:
-	- mongo cast_test --eval 'db.addUser("travis", "test");'
+	- RAILS_ENV=test bundle exec rake db:create
+	- RAILS_ENV=test bundle exec rake db:migrate
+	- bundle exec rake
