@@ -1,3 +1,1 @@
-var CAST = CAST || {};
-
-CAST.App = angular.module('Cast', ['ngResource']);
+var Cast = angular.module('Cast', ['ngResource']);
