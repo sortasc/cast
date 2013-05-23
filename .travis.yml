@@ -1,10 +1,9 @@
 language: ruby
 rvm:
-	- ruby-1.9.3-p362
-services: 
-	- mongodb
-
+  - ruby-1.9.3-p362
+services:
+  - mongodb
 script:
-	- RAILS_ENV=test bundle exec rake db:create
-	- RAILS_ENV=test bundle exec rake db:migrate
-	- bundle exec rake
+  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake db:migrate
+  - bundle exec rake
