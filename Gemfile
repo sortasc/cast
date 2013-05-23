@@ -13,7 +13,7 @@ gem 'redis'
 # gem 'newrelic_rpm'
 gem 'jquery-rails'
 # gem 'unicorn'
-
+gem 'rack-cors', require: 'rack/cors'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,16 +23,20 @@ end
 
 group :development do 
   gem 'mailcatcher'
-  gem 'pry'
-  gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
 end
 
 group :test do
-  gem 'minitest'
-  gem 'turn'
+  gem 'database_cleaner'
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'thin'
+  gem 'pry'
 end
 
 gem 'coveralls', require: false

@@ -9,6 +9,7 @@
 //= require_tree ./flat
 //= require vendor/packery.pkgd
 //= require vendor/jquery.nanoscroller
+//= require vendor/reader
 
 $( function() {
   var $container = $('#packery');
@@ -25,5 +26,7 @@ $( function() {
 
   // timeline scrollbar
 	$(".nano").nanoScroller();
+	// feed
+	$('#feed').reader('http://foster.sorta.in/rss');
 });
 

@@ -80,9 +80,14 @@ module Cast
       Devise::PasswordsController.layout 'login'        
     end
 
-    config.generators do |g|
-      g.test_framework :mini_test, spec: true, fixture: true
-      g.integration_tool :mini_test
+    # CORS
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*/*'
+        resource %r{/users/\d+.json},
+          :headers => ['Origin', 'Accept', 'Content-Type'],
+          :methods => [:get]
+      end
     end
 
   end
