@@ -2,13 +2,16 @@
 // 
 //= require jquery
 //= require jquery_ujs
-//= require library/json2
-//= require library/underscore-min
-//= require library/backbone-min
-//= require library/mustache
-//= require_tree ./flat
+
+//= require_tree ./vendor/flat
 //= require vendor/packery.pkgd
 //= require vendor/jquery.nanoscroller
+
+//= require lib/angular
+//= require lib/angular-resource
+//= require cast
+//= require_tree ./angular
+
 
 $( function() {
   var $container = $('#packery');
