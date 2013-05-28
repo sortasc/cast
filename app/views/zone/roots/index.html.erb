@@ -1,0 +1,29 @@
+<%= models_sidebar 'roots' %>
+
+<div class="box">
+	<div class="box-header">
+    <h1><%= t('roots') %></h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @roots.each do |root| %>
+      <tr>
+        <td><%= root.id %></td>
+        <td><%= root.email %></td>
+        <td>
+          <a href="#" class="button plain">Edit</a>
+          <%= link_to 'Delete', zone_root_path(root), method: :delete, class: 'button plain' %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
