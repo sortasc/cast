@@ -1,0 +1,6 @@
+# encoding: utf-8
+"pt-BR":
+  dashboard: 'Painel'
+  settings: 'Configurações'
+  models: 'Cadastros'
+  logout: 'Sair'

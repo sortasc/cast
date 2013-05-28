@@ -218,52 +218,6 @@
 
   activerecord:
     attributes:
-      profile:
-        name: "Nome"
-        document: "CPF"
       user:
         password: "Senha"
         password_confirmation: "Confirmação de Senha"
-      phone:
-        number: "Telefone para contato"
-        number2: "Telefone que aparecerá no site"
-      address:
-        city: "Cidade"
-        country: "País"
-        number: "Número"
-        state: "Estado"
-        street: "Rua"
-        zipcode: "CEP"
-        neighborhood: "Bairro"
-        complement: "Complemento"
-      site:
-        user: "Usuário"
-        name: "Nome do seu negócio"
-        email: "Email que aparecerá no seu site"
-        description: "Descrição"
-        category: "Qual o seu ramo de atuação?"
-        subdomain: "Subdomínio"
-        actived: "Ativo"
-        published: "No Ar"
-        custom_category_name: "Categoria personalizada"
-      plan:
-        plan_type: "Tipo de Plano"
-        begins_at: "Aderiu em"
-        expires_at: "Termina em"
-        auto_renew: "Renovação Automática"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
-  header:
-    title: 'Crie um site profissional e elegante em apenas 5 minutos.'
-  menu:
-    home: Home
-    sample: Exemplos
-    prices: Preços
-    about: Sobre Nós
-    support: Suporte
-    blog: Blog
-    login: Entrar
-    account: Conta
-    new_site: Criar Site
-  form:
-    login: Entrar
