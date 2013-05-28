@@ -1,0 +1,13 @@
+<%= content_for :sidebar do %>
+  <nav id="secondary">
+    <ul>
+      <li><%= link_to t('users'), '#' %></li>
+      <li><%= link_to t('company'), zone_companies_path %></li>
+      <li><%= link_to t('roots'), '#' %></li>
+    </ul>
+    
+    <div id="notifications">
+      <ul></ul>
+    </div>
+  </nav>
+<% end %>

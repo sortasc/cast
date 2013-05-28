@@ -8,5 +8,5 @@ class Zone::DashboardController < ApplicationController
 
   def models
   end
-  
+
 end

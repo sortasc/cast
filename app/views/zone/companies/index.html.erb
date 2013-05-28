@@ -1,0 +1,55 @@
+<%= models_sidebar 'company' %>
+
+<div class="box">
+  <div class="box-header">
+    <h1><%= t('create') %></h1>
+  </div>
+
+  <div class="box-content">
+    <%= form_for [:zone, Company.new] do |form| %>
+		  <div class="column-left">
+				<p><%= form.text_field :name, placeholder: 'Name', class: '{validate: {required:true}}' %></p>
+			</div>
+			<div class="column-right">
+				<p><%= form.text_field :url, placeholder: 'URL', class: '{validate: {required:true}}' %></p>
+			</div>
+
+      <div class="clear"></div>
+			<div class="action_bar">
+				<%= form.submit class: 'button blue'  %>
+	    </div>
+    <% end %>
+  </div>
+</div>
+  
+<div class="box">
+	<div class="box-header">
+    <h1><%= t('company').pluralize %></h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Employees</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @companies.each do |company| %>
+      <tr>
+        <td><%= company.id %></td>
+        <td><%= company.name %></td>
+        <td><%= company.url %></td>
+        <td><%= company.users.size %></td>
+        <td>
+          <a href="#" class="button plain">Edit</a>
+          <%= link_to 'Delete', zone_company_path(company), method: :delete, class: 'button plain' %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

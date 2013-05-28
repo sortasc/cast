@@ -1,3 +1,4 @@
+# keep same line
 en:
   dashboard: Dashboard
   settings: Settings
@@ -6,3 +7,4 @@ en:
   company: Company
   users: Users
   roots: Roots
+  create: Create
