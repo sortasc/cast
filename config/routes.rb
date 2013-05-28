@@ -7,6 +7,7 @@ Cast::Application.routes.draw do
     get '/', to: 'dashboard#index'
     get '/models', to: 'dashboard#models'
     resources :companies
+    resources :users
   end
 
   root to: 'boards#index'
