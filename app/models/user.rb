@@ -41,6 +41,7 @@ class User
   field :username, type: String
   field :name, type: String
   field :boss, type: Boolean, default: false
+  belongs_to :company
 
   attr_accessor :login
   attr_accessible :login
