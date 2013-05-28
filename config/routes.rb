@@ -5,6 +5,7 @@ Cast::Application.routes.draw do
   
   namespace :zone do
     get '/', to: 'dashboard#index'
+    get '/models', to: 'dashboard#models'
   end
 
   root to: 'boards#index'

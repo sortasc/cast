@@ -4,3 +4,6 @@
   settings: 'Configurações'
   models: 'Cadastros'
   logout: 'Sair'
+  company: 'Empresas'
+  users: 'Usuários'
+  roots: 'Admin'

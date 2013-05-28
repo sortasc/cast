@@ -11,16 +11,16 @@
     <nav id="primary">
       <ul>
         <li class="active">
-          <a href="#">
+          <%= link_to zone_path do %>
             <span class="icon32 dashboard"></span>
             <%= t('dashboard') %>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to zone_models_path do %>
             <span class="icon32 listicon"></span>
             <%= t('models') %>
-          </a>
+          <% end %>
         </li>
         <li>
           <a href="#">
@@ -44,13 +44,7 @@
       </ul>
     </nav>
     
-    <nav id="secondary">
-      
-      <div id="notifications">
-        <ul>
-        </ul>
-      </div>
-    </nav>
+    <%= yield :sidebar %>
     
     <section id="maincontainer">
       <div id="main" class="container_12">

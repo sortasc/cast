@@ -3,3 +3,6 @@ en:
   settings: Settings
   models: Models
   logout: Logout
+  company: Company
+  users: Users
+  roots: Roots

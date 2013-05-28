@@ -5,5 +5,8 @@ class Zone::DashboardController < ApplicationController
   
   def index
   end
+
+  def models
+  end
   
 end
