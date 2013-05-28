@@ -2,6 +2,7 @@
 // SPINA THEME
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require vendor/spina/jqueryui.min
 //= require vendor/spina/jquery.cookies
 //= require vendor/spina/jquery.pjax
