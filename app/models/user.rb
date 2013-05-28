@@ -41,10 +41,13 @@ class User
   field :username, type: String
   field :name, type: String
   field :boss, type: Boolean, default: false
+  field :enable, type: Boolean, default: true
   belongs_to :company
 
   attr_accessor :login
   attr_accessible :login
+
+  scope :active, -> { where(enable: true) }
 
   # function to handle user's login via email or username
   def self.find_for_database_authentication(warden_conditions)
