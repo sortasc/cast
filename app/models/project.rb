@@ -1,8 +1,7 @@
-class Company
+class Project
   include Mongoid::Document
   field :name, type: String
-  field :url, type: String
-  has_many :users
-  has_many :projects
+  field :description, type: String
+  belongs_to :company
   validates :name, presence: true
 end
