@@ -1,11 +1,27 @@
 <div id="packery" ng-controller='BoardsController'>
   <div class="item mood"></div>
-  <div class="item widget"></div>
-  <div class="item notes"></div>
+  <div class="item events">
+  	<h6>Events</h6>
+  	<div class="content"></div>
+  </div>
+  
+  <div class="item notes">
+  	<h6>Notes</h6>
+  	<div class='content'></div>
+  </div>
+
   <div class="item score">{{ score }}</div>
   <div class="item timeline nano">
 		<%= render 'timeline' %>
   </div>
-  <div class="item feed" id='feed'></div>
-  <div class="item chat"></div>
+  
+  <div class="item feed" id='feed'>
+  	<h6>News</h6>
+  	<div class="content"></div>
+  </div>
+
+  <div class="item chat">
+  	<h6>Chat</h6>
+  	<div class="content"></div>
+  </div>
 </div>

@@ -4,34 +4,49 @@
 	box-sizing: border-box
 #packery
 	width: 960px
+	margin: 0 auto
 	font-family: "Lato", sans-serif
 	.item
-		padding: 10px
-		background-color: #bdc3c7
-		width: 200px
-		height: 200px
+		background-color: #FFF
+		width: 224px
+		height: 224px
+		border-radius: 5px
+		.content
+			padding: 10px
+		h6
+			font-family: "Lato", sans-serif
+			color: white
+			padding: 10px
+			margin: 0
+			text-transform: capitalize
+			border-radius: 5px 5px 0 0
 		&.mood
-			background-color: #2980b9
+			background-color: #3498db
 		&.widget
-			background-color: #7f8c8d
+			background-color: #bdc3c7
 		&.score
-			background-color: #7f8c8d
+			background-color: #bdc3c7
 			padding: 50px 56px
 			font-size: 70px
 			font-weight: bold
 			color: #ecf0f1
 		&.feed
-			background-color: #c0392b
+			h6
+				background-color: #e74c3c
 		&.notes
-			background-color: #16a085
+			h6
+				background-color: #1ABC9C
 		&.events
-			background-color: #e67e22
+			h6
+				background-color: #34495e
 		&.timeline
 			background-color: #ecf0f1
-			width: 640px
+			width: 712px
 			height: 640px
 		&.chat
 			height: 420px
+			h6
+				background-color: #3498db
 		&.ui-draggable-dragging, .is-positioning-post-drag
 			background: #09F
 			z-index: 2
