@@ -6,6 +6,7 @@
 //= require_tree ./vendor/flat
 //= require vendor/packery.pkgd
 //= require vendor/jquery.nanoscroller
+//= require vendor/jquery.knob
 
 //= require lib/angular
 //= require lib/angular-resource
@@ -28,7 +29,12 @@ $( function() {
 
   // timeline scrollbar
 	$(".nano").nanoScroller();
-	// feed
+	
+  // feed
 	// $('#feed').reader('http://foster.sorta.in/rss');
+
+  // circular progress to score 
+  $(".dial").knob({ readOnly: true });
+
 });
 

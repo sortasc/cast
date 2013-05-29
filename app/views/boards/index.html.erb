@@ -1,5 +1,6 @@
 <div id="packery" ng-controller='BoardsController'>
-  <div class="item mood"></div>
+  <div class="item mood"><img src='/assets/icons/dead.png'></div>
+
   <div class="item events">
   	<h6>Events</h6>
   	<div class="content"></div>
@@ -10,7 +11,10 @@
   	<div class='content'></div>
   </div>
 
-  <div class="item score">{{ score }}</div>
+  <div class="item score">
+    <input class='dial' data-min='-100' data-bgColor='#ECF0F1' data-fgColor='#2ecc71' data-displayPrevious=true value='{{ score }}'>
+  </div>
+
   <div class="item timeline nano">
 		<%= render 'timeline' %>
   </div>
