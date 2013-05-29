@@ -47,7 +47,7 @@ class User
   has_many :rosters
 
   attr_accessor :login
-  attr_accessible :login
+  attr_accessible :login, :username, :email, :password
 
   scope :active, -> { where(enable: true) }
 
