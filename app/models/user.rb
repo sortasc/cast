@@ -42,7 +42,9 @@ class User
   field :name, type: String
   field :boss, type: Boolean, default: false
   field :enable, type: Boolean, default: true
+
   belongs_to :company
+  has_many :rosters
 
   attr_accessor :login
   attr_accessible :login
