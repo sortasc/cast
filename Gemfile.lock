@@ -115,6 +115,11 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    public_activity (1.0.3)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      i18n (>= 0.5.0)
+      railties (~> 3.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -223,6 +228,7 @@ DEPENDENCIES
   meta_request
   mongoid (~> 3.0.0)
   pry
+  public_activity
   rack-cors
   rails (= 3.2.13)
   redis

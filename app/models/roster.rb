@@ -1,6 +1,6 @@
 class Roster
   include Mongoid::Document
-
+	include PublicActivity::Common
   # Journey, workday
 
   field :starts_at, type: Time

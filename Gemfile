@@ -16,6 +16,8 @@ gem 'jquery-rails'
 gem 'rack-cors', require: 'rack/cors'
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'public_activity'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
