@@ -12,7 +12,7 @@
     .orbit-container .orbit-slides-container > * {
       position: relative;
       float: left;
-      height: 100%; }
+      height: auto; }
       .orbit-container .orbit-slides-container > * .orbit-caption {
         position: absolute;
         bottom: 0;

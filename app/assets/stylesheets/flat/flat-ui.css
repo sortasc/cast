@@ -2327,7 +2327,7 @@ body.vjs-full-window {
   animation: sharp 2s ease infinite; }
 
 .login {
-  background: url("../images/login/imac.png") 0 0 no-repeat;
+  background: url("../assets/flat/imac.png") 0 0 no-repeat;
   background-size: 940px 778px;
   color: white;
   margin-bottom: 77px;
@@ -2408,7 +2408,7 @@ body.vjs-full-window {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .login {
-    background-image: url("../images/login/imac-2x.png"); } }
+    background-image: url("../assets/flat/imac-2x.png"); } }
 .ptn, .pvn, .pan {
   padding-top: 0; }
 

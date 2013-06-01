@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cast Login</title>
-  <%= stylesheet_link_tag  "flat/bootstrap", "flat/flat-ui", "vendor/orbit", "resources/_login", :media => "all" %>
-  <%= javascript_include_tag "vendor/custom.modernizr", "vendor/jquery", "vendor/foundation/foundation", "vendor/foundation/foundation.orbit" %>
+  <%= stylesheet_link_tag  "flat/bootstrap", "flat/flat-ui", "resources/_login", :media => "all" %>
+  <%= javascript_include_tag 'vendor/custom.modernizr' %>
   <%= csrf_meta_tags %>
 </head>
 <body data-namespace='login'>
 
   <div class="login-screen">
 
-    <div class="orbit-container">
-      <ul data-orbit>
-        <li data-orbit-slide="login" class="active">
+    <ul>
+      <li data-slide='in' class='active'>
+        <div class="login-form">
           <%= form_for 'user', url: user_session_path do |f| %>
-          <div class="login-form">
             <div class="control-group">
               <%= f.text_field :login, autofocus: true, placeholder: "Email or Username", class: "login-field" %>
               <label for="login-name" class="login-field-icon fui-man-16"></label>
@@ -27,48 +28,45 @@
 
             <%= f.submit "Login", class: "btn btn-primary btn-large btn-block" %><br />
             <a href="#" class="login-link">Lost your password?</a><br />
-            <%= link_to "Sign up", '', 'data-orbit-link' => 'register', class: "login-link" %><br />
-          </div>
+            <%= link_to "Sign up", '', 'data-link' => 'up', class: "login-link" %><br />
           <% end %>
-        </li>
+        </div>
+      </li>
 
-        <li data-orbit-slide="register">
+      <li data-slide='up' class='hide'>
+        <div class="login-form">
           <%= form_for 'user', url: user_registration_path do |f| %>
-            <div class="login-form">
-              <div class="control-group">
-                <%= f.text_field :username, placeholder: "Username", class: "login-field" %>
-                <label for="login-name" class="login-field-icon fui-man-16"></label>
-              </div>
-              <div class="control-group">
-                <%= f.email_field :email, placeholder: "Email", class: "login-field" %>
-                <label for="login-name" class="login-field-icon fui-mail-16"></label>
-              </div>
-              <div class="control-group">
-                <%= f.password_field :password, placeholder: 'Password', class: 'login-field' %>
-                <label for="login-pass" class="login-field-icon fui-lock-16"></label>
-              </div>
-              <%= f.submit "Register", class: "btn btn-primary btn-large btn-block" %><br />
-              <a href="#" class="login-link">Lost your password?</a><br />
-              <%= link_to "Login", '', 'data-orbit-link' => 'login', class: "login-link sign" %><br />
+            <div class="control-group">
+              <%= f.text_field :username, placeholder: "Username", class: "login-field" %>
+              <label for="login-name" class="login-field-icon fui-man-16"></label>
             </div>
+            <div class="control-group">
+              <%= f.email_field :email, placeholder: "Email", class: "login-field" %>
+              <label for="login-name" class="login-field-icon fui-mail-16"></label>
+            </div>
+            <div class="control-group">
+              <%= f.password_field :password, placeholder: 'Password', class: 'login-field' %>
+              <label for="login-pass" class="login-field-icon fui-lock-16"></label>
+            </div>
+            <%= f.submit "Register", class: "btn btn-primary btn-large btn-block" %><br />
+            <a href="#" class="login-link">Lost your password?</a><br />
+            <%= link_to "Login", '', 'data-link' => 'in', class: "login-link sign" %><br />
           <% end %>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </li>
+    </ul>
 
   </div>
 
+  <%= javascript_include_tag 'vendor/jquery' %>
+
   <script>
-  $(document).foundation('orbit', {
-    timer_speed: null,
-    bullets: false,
-    stack_on_small: false,
-    next_class: false,
-    prev_class: false,
-    timer_container_class: false,
-    timer_progress_class: false,
-    slide_number_class: false,
-  });
+    $(function(){
+      $('[data-link]').on('click', function(e){
+        e.preventDefault();
+        $('[data-slide]').toggle();
+      })
+    });
   </script>
 </body>
 </html>
