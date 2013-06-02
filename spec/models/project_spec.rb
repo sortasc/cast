@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Project do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { FactoryGirl.create :project }
+  it { should be_valid }
 end

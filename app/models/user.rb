@@ -46,6 +46,8 @@ class User
   belongs_to :company
   has_many :rosters
 
+  # TODO: validates :company_id, presence: true
+
   attr_accessor :login
   attr_accessible :login, :username, :email, :password
 

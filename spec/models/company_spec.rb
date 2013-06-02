@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Company do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { FactoryGirl.create :company }
+  it { should be_valid }
 end
