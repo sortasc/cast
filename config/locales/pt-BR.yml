@@ -1,8 +1,10 @@
 # encoding: utf-8
 "pt-BR":
-  hello: "Olá"
-  login: "Entrar"
-  logout: "Sair"
+  menu:
+    boards: 'Quadros'
+    feed: 'Notícias'
+    login: "Entrar"
+    logout: "Sair" 
   change_password: "Alterar Senha"
   forgot_password: "Esqueceu a senha?"
   add: "Adicionar"
