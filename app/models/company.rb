@@ -7,9 +7,16 @@ class Company
   has_many :users
   has_many :projects
   validates :name, presence: true
-  validates :subdomain, 
-    presence: true,
-    format: { with: /^[a-z0-9_]+$/ }, 
-    length: { maximum: 32 }, 
-    exclusion: { in: %w(www mail ftp) }
+  validates :subdomain,
+  	format: { with: /^[a-z0-9_]+$/ }, 
+  	length: { maximum: 32 }, 
+  	exclusion: { in: %w(www mail ftp) }
+
+  def self.current_id=(id)
+    Thread.current[:company_id] = id
+  end
+
+  def self.current_id
+    Thread.current[:company_id]
+  end
 end

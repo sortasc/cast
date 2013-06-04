@@ -8,11 +8,11 @@
   <div class="box-content">
     <%= form_for [:zone, Company.new] do |form| %>
 		  <div class="column-left">
-        <p><%= form.text_field :name, placeholder: 'Name', class: '{validate: {required:true}}' %></p>
+        <p><%= form.text_field :name, placeholder: 'Name', class: '{validate: {required:true}}', required: true %></p>
 				<p><%= form.text_field :email, placeholder: 'Email', class: '{validate: {required:true}}' %></p>
 			</div>
 			<div class="column-right">
-        <p><%= form.text_field :url, placeholder: 'URL', class: '{validate: {required:true}}' %></p>
+        <p><%= form.text_field :url, placeholder: 'URL', class: '{validate: {required:true}}', required: true %></p>
 				<p><%= form.text_field :subdomain, placeholder: 'subdomain', class: '{validate: {required:true}}' %></p>
 			</div>
 

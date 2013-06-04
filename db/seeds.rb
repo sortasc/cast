@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Root.create email: 'admin@cast.com', password:  'q1w2e3r4', password_confirmation:  'q1w2e3r4'
+Root.create email: 'root@cast.com', password:  'q1w2e3r4', password_confirmation:  'q1w2e3r4'
 Company.create name: 'Sorta Software Club', url: 'http://sorta.in', subdomain: 'sorta', email: 'contato@sorta.in'
