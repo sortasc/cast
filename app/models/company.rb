@@ -8,7 +8,6 @@ class Company
   has_many :projects
   validates :name, presence: true
   validates :subdomain,
-  	uniqueness: true,
   	format: { with: /^[a-z0-9_]+$/ }, 
   	length: { maximum: 32 }, 
   	exclusion: { in: %w(www mail ftp) }
