@@ -4,3 +4,5 @@ en:
     feed: Feed
     login: Login
     logout: Logout
+  boards:
+    journey: Journey

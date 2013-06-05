@@ -5,6 +5,8 @@
     feed: 'Notícias'
     login: "Entrar"
     logout: "Sair" 
+  boards:
+    journey: 'Jornada'
   change_password: "Alterar Senha"
   forgot_password: "Esqueceu a senha?"
   add: "Adicionar"

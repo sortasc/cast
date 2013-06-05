@@ -1,29 +1,39 @@
 <div id="packery" ng-controller='BoardsController'>
   <div class="item mood"><img src='/assets/icons/dead.png'></div>
 
-  <div class="item events">
-  	<h6>Events</h6>
-  	<div class="content"></div>
-  </div>
-  
   <div class="item notes">
-  	<h6>Notes</h6>
-  	<div class='content'></div>
+    <h6>Notes</h6>
+    <div class='content'></div>
   </div>
 
   <div class="item score">
     <input class='dial' data-min='-100' data-bgColor='#27ae60' data-fgColor='#2ecc71' data-thickness='.4' data-displayPrevious=true value='{{ score }}'>
   </div>
 
-  <div class="item timeline nano">
-		<%= render 'timeline' %>
+  <div class="item timer">
+    <h6><%= t('boards.journey') %></h6>
+    <div class='start'><a><span>&#9654;</span></a></div>
+    <div class='add'><a><span>&#10133;</span></a></div>
+  </div>
+
+  <div class="item discourse">
+    <p> <span class="user">Claudia Farias: </span>Loren Ipsum color what? <span class="posted_at">Há 10 minutos atrás</span></p>
+  </div>
+
+  <div class="item discourse">
+    <p> <span class="user">Claudia Farias: </span>Mauris consectetur elementum massa nec convallis. Integer mauris purus, condimentum vitae mattis a, vehicula lacinia justo. Pellentesque scelerisque orci at ligula cursus eu tempor elit euismod. Donec eleifend, turpis in vulputate eleifend, orci lectus eleifend quam, et ultrices mi nisi id nulla?  <span class="posted_at">Há 10 minutos atrás</span></p>
   </div>
   
   <div class="item feed" id='feed'>
-  	<h6>News</h6>
-  	<div class="content"></div>
+    <h6>News</h6>
+    <div class="content"></div>
   </div>
 
+  <div class="item events">
+    <h6>Events</h6>
+    <div class="content"></div>
+  </div>
+  
   <div class="item chat">
   	<h6>Chat</h6>
   	<div class="content"></div>
