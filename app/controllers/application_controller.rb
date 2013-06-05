@@ -17,12 +17,12 @@ class ApplicationController < ActionController::Base
 	private
 
   def current_tenant
-    Company.find_by subdomain: request.subdomain
+    Company.find_by subdomain: request.subdomain unless request.subdomain.blank?
   end
   helper_method :current_tenant
 
   def scope_current_tenant
-    Company.current_id = current_tenant.id
+    Company.current_id = current_tenant.id if current_tenant
     yield
   ensure
     Company.current_id = nil
