@@ -63,4 +63,8 @@ class User
     end
   end
 
+  def nick
+    name || username
+  end
+
 end
