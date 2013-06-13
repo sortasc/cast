@@ -11,6 +11,8 @@ Cast::Application.routes.draw do
     resources :users
   end
 
+  resources :projects
+
   get 'timeline', to: 'timeline#index', as: 'timeline'
   root to: 'boards#index'
   
