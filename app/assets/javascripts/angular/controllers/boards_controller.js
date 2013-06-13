@@ -1,3 +1,3 @@
-Cast.controller('BoardsController', ['$scope', '$http', function($scope, $http){
+Cast.controller('BoardsCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.score = 57;
 }]);

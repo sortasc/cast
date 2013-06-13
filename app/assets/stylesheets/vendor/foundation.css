@@ -3685,7 +3685,7 @@ table {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
 
-/* Tooltips */
+/* Tooltips
 .has-tip {
   border-bottom: dotted 1px #cccccc;
   cursor: help;
@@ -3757,6 +3757,10 @@ table {
   .f-dropdown {
     max-width: 100%;
     left: 0; } }
+
+*/
+
+
 /* Foundation Dropdowns */
 .f-dropdown {
   position: absolute;

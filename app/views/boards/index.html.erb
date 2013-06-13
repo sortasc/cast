@@ -1,4 +1,4 @@
-<div id="packery" ng-controller='BoardsController'>
+<div id="packery">
   <div class="item mood"><img src='/assets/icons/dead.png'></div>
 
   <div class="item notes">
@@ -6,14 +6,27 @@
     <div class='content'></div>
   </div>
 
-  <div class="item score">
+  <div class="item score" ng-controller='ScoresCtrl'>
     <input class='dial' data-min='-100' data-bgColor='#27ae60' data-fgColor='#2ecc71' data-thickness='.4' data-displayPrevious=true value='{{ score }}'>
   </div>
 
-  <div class="item timer">
+  <div class="item timer" ng-controller='JourneysCtrl'>
     <h6><%= t('boards.journey') %></h6>
-    <div class='start'><a><span>&#9654;</span></a></div>
-    <div class='add'><a><span>&#10133;</span></a></div>
+    <div class='start' ng-click='start()'><a><span>&#9654;</span></a></div>
+    <div class='add' ng-click='place()'><a><span>&#10133;</span></a></div>
+    
+    <div data-ng-show='tools.journey' data-ng-animate="'fade'">
+      <div class='tooltip fade bottom in journey'>
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">
+          <h6><%= t('add_hours') %></h6>
+          <input type="text" class="span3" name='hours' placeholder="00:00">
+          <input type="text" class="span3" name='project' placeholder="Project">
+          <a class="btn btn-block btn-success" href="#">Save?</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="item discourse">

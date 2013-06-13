@@ -6,3 +6,4 @@ en:
     logout: Logout
   boards:
     journey: Journey
+    add_hours: 'Add Hours'
